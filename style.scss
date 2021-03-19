@@ -9,6 +9,10 @@
 .tweet-button {
   text-align: right;
   margin-top: 20px;
+  .feed-post-button {
+    border-radius: 30px;
+    padding: 6px 20px;
+  }
 }
 .feed-wrapper {
   margin-top: 20px;

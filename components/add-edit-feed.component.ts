@@ -24,7 +24,7 @@ import { localService } from "../local.service";
         ></b-form-textarea>
       </b-form-group>
       <div class="tweet-button">
-        <b-button class="ml-auto" variant="primary" @click="add()" 
+        <b-button class="ml-auto" class="feed-post-button" variant="primary" @click="add()" 
           >Tweet</b-button
         >
       </div>
@@ -38,7 +38,7 @@ export class AddEditFeed extends Vue {
   feedText: string = "";
   isInvalid: boolean = false;
   isSubmitted: boolean = false;
-  avatar = "https://via.placeholder.com/150";
+  avatar = "https://i.pravatar.cc/150?img=6";
   emits: ["feedAdded"];
   @Prop() public editFeedObj = null;
   add() {
