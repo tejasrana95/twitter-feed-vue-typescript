@@ -1,0 +1,49 @@
+// @fa-font-path:   '../font';
+// @import '~font-awesome/css/font-awesome.min.css';
+@import "~bootstrap/scss/bootstrap";
+
+.avatar {
+  border-radius: 50%;
+  max-width: 60px;
+}
+.tweet-button {
+  text-align: right;
+  margin-top: 20px;
+}
+.feed-wrapper {
+  margin-top: 20px;
+  .feed-like {
+    span {
+      margin-left: 10px;
+    }
+  }
+  .feed-data-wrapper {
+    margin-left: 15px;
+  }
+  .action-button {
+    button {
+      margin-right: 20px;
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .time {
+    margin-left: 10px;
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-bottom: 3px;
+      width: 3px;
+      height: 3px;
+      background-color: #808080;
+      border-radius: 50%;
+      margin-left: 0px;
+      margin-right: 6px;
+    }
+  }
+}
