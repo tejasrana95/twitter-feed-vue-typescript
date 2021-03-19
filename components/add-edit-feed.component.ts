@@ -36,7 +36,6 @@ import { localService } from "../local.service";
 export class AddEditFeed extends Vue {
   feedData: FeedModel = null;
   feedText: string = "";
-  isInvalid: boolean = false;
   isSubmitted: boolean = false;
   avatar = "https://i.pravatar.cc/150?img=6";
   emits: ["feedAdded"];
@@ -57,7 +56,6 @@ export class AddEditFeed extends Vue {
       });
       localService.add(feedData);
     }
-    this.isInvalid = null;
     this.feedText = "";
     this.isSubmitted = false;
     this.$emit("feedAdded", new Date().getTime());
