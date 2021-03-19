@@ -12,7 +12,7 @@ export class FeedModel {
     this.name = data.name || "Demo User";
     this.feedText = data.feedText || null;
     this.like = data.like || 0;
-    this.avatar = data.avatar || "";
+    this.avatar = data.avatar || "https://i.pravatar.cc/150?img=6";
     this.userName = data.userName || "DemoUser123";
     this.created = data.created || new Date().getTime();
   }
