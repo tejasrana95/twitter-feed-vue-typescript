@@ -7,7 +7,6 @@ import { localService } from "../local.service";
   name: "add-edit-feed",
   props: ["editFeedObj"],
   watch: {
-    // You can also set up a watcher for name here if you like
     editFeedObj(newValue) {
       this.handleFeed(newValue);
     }
@@ -24,7 +23,7 @@ import { localService } from "../local.service";
         ></b-form-textarea>
       </b-form-group>
       <div class="tweet-button">
-        <b-button class="ml-auto" class="feed-post-button" variant="primary" @click="add()" 
+        <b-button class="ml-auto"  :disabled='isSubmitted' class="feed-post-button" variant="primary" @click="addUpdateFeed()" 
           >Tweet</b-button
         >
       </div>
@@ -41,7 +40,7 @@ export class AddEditFeed extends Vue {
   avatar = "https://i.pravatar.cc/150?img=6";
   emits: ["feedAdded"];
   @Prop() public editFeedObj = null;
-  add() {
+  addUpdateFeed() {
     this.isSubmitted = true;
     if (
       this.feedData &&
@@ -57,7 +56,6 @@ export class AddEditFeed extends Vue {
       });
       localService.add(feedData);
     }
-
     this.isInvalid = null;
     this.feedText = "";
     this.isSubmitted = false;
