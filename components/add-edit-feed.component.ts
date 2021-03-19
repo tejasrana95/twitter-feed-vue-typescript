@@ -20,6 +20,7 @@ import { localService } from "../local.service";
           placeholder="What's happening?"
            rows="6"
         maxlength="280"
+        class="feed-textarea"
         ></b-form-textarea>
       </b-form-group>
       <div class="tweet-button">
