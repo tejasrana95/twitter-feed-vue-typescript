@@ -23,7 +23,7 @@ import { localService } from "../local.service";
         ></b-form-textarea>
       </b-form-group>
       <div class="tweet-button">
-        <b-button class="ml-auto"  :disabled='isSubmitted' class="feed-post-button" variant="primary" @click="addUpdateFeed()" 
+        <b-button class="ml-auto feed-post-button"  :disabled='isSubmitted' variant="primary" @click="addUpdateFeed()" 
           >Tweet</b-button
         >
       </div>
